@@ -20,14 +20,21 @@ class DicePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Row (
-         children: [
-           Image.asset("images/dice1.png"),
-           Image.asset("images/dice2.png"),
-         ],
-         ),
+        child: Row(
+          children: [
+            Expanded(
+                child:
+                TextButton(
+                  onPressed:(){print('Cliquez');},
+                    child: Image.asset("images/dice1.png"))),
+            Expanded(
+                child:
+                TextButton(
+                  onPressed:(){print('Cliquez');},
+                    child: Image.asset("images/dice2.png"))),
+          ],
+        ),
       ),
     );
-
   }
 }
